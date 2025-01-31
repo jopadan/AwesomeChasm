@@ -9,7 +9,9 @@ Chasm: The Rift PC game resource collection.
 
 ### Reverse Engineering
 - [Peganza Pascal Analyzer](https://www.peganza.com/)
+- [A Deep Dive into the Turbo Pascal Compiled Code](https://github.com/daelsepara/turbo-pascal-assembly)
 - [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal)
+- [TDInfo Parser for IDA](https://github.com/ramikg/tdinfo-parser)
 - [Duncan Murdoch's Programs](https://www.murdoch-sutherland.com/programs/index.htm)
 - [Rebuild of Turbo Pascal exe missing TPU modules](https://comp.lang.pascal.borland.narkive.com/1B3WeJkX/rebuild-of-turbo-pascal-exe-missing-tpu-modules)
 - [Reverse Engineering Delphi Binaries in Ghidra with Dhrake](https://blag.nullteilerfrei.de/2019/12/23/reverse-engineering-delphi-binaries-in-ghidra-with-dhrake/)
