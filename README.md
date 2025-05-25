@@ -22,6 +22,7 @@ Chasm: The Rift PC game resource collection.
 ### Similiar Pascal Games
 - [HROT](https://en.wikipedia.org/wiki/Hrot)
 - [HROT Demo](https://www.gog.com/en/game/hrot_demo)
+- [HROT CLI Tools](https://github.com/joshuaskelly/hrot-cli-tools)
 
 HROT .PAK FILE FORMAT:
 ```
