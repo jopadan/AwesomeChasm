@@ -20,12 +20,13 @@ Chasm: The Rift PC game resource collection.
 - [Kaitai Struct: declarative language to generate binary data parsers](https://github.com/kaitai-io/kaitai_struct)
 
 ### Similiar Pascal Games
+
+#### HROT
 - [HROT](https://en.wikipedia.org/wiki/Hrot)
 - [HROT Demo](https://www.gog.com/en/game/hrot_demo)
 - [HROT CLI Tools](https://github.com/joshuaskelly/hrot-cli-tools)
-
-HROT .PAK FILE FORMAT:
-```
+- HROT .PAK FILE FORMAT
+```cpp
 struct header
 {
     c8<4> magic = "HROT"
