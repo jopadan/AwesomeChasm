@@ -8,6 +8,7 @@ Chasm: The Rift PC game resource collection.
 - [Chasm: The Rift Demo](https://www.gog.com/en/game/chasmtherift_demo)
 - [Chasm: The Rift Modding Wiki](https://moddingwiki.shikadi.net/wiki/Chasm:_The_Rift)
 - [Chasm: The Rift - Website Recreation by Effektus](http://chasm.atspace.eu/)
+- [Noesis .3O/.CAR 3D model viewer/converter](https://richwhitehouse.com/index.php?content=inc_stream.php)
 
 ### Reverse Engineering
 - [Peganza Pascal Analyzer](https://www.peganza.com/)
