@@ -22,3 +22,19 @@ Chasm: The Rift PC game resource collection.
 ### Similiar Pascal Games
 - [HROT](https://en.wikipedia.org/wiki/Hrot)
 - [HROT Demo](https://www.gog.com/en/game/hrot_demo)
+
+HROT .PAK FILE FORMAT:
+```
+struct header
+{
+    c8<4> magic = "HROT"
+    u32   names;
+    u32   count; // 128 is file count
+};
+
+struct entry
+{
+    c8<120> name; // terminated with 0x00
+    u32 pos;
+    u32 len;
+};
