@@ -1,19 +1,23 @@
 # AwesomeChasm
 Chasm: The Rift PC game resource collection.
 
+## Links
+- [Chasm: The Rift Archive](https://www.chasm3d.com/)
+- [Chasm: The Rift Modding Wiki](https://moddingwiki.shikadi.net/wiki/Chasm:_The_Rift)
+- [Chasm: The Rift - Website Recreation by Effektus](http://chasm.atspace.eu/)
+
 ## Ports
 - [Chasm-Reverse Panzerchasm](https://github.com/Panzerschrek/Chasm-Reverse)
 - [OpenChasm](https://github.com/alexey-lysiuk/OpenChasm)
 - [Chasm: The Rift Portable Staging](https://www.moddb.com/games/chasm-the-rift/downloads/chasm-portable-staging)
 - [Chasm: The Rift Demo](https://www.gog.com/en/game/chasmtherift_demo)
 
-## Links
-- [Chasm: The Rift Archive](https://www.chasm3d.com/)
-- [Chasm: The Rift - FLAC OST music](https://www.chasm3d.com/files/music/flac/)
+## Models
 - [Chasm: The Rift - 3OVIEW.EXE DOS model viewer](https://www.chasm3d.com/files/dump/CDEMOf.zip)
-- [Chasm: The Rift Modding Wiki](https://moddingwiki.shikadi.net/wiki/Chasm:_The_Rift)
-- [Chasm: The Rift - Website Recreation by Effektus](http://chasm.atspace.eu/)
 - [Noesis .3O/.CAR 3D model viewer/converter](https://richwhitehouse.com/index.php?content=inc_stream.php)
+
+## Music
+- [Chasm: The Rift - FLAC OST music](https://www.chasm3d.com/files/music/flac/)
 
 ## Reverse Engineering
 - [Peganza Pascal Analyzer](https://www.peganza.com/)
