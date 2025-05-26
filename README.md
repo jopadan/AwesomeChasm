@@ -1,6 +1,12 @@
 # AwesomeChasm
 Chasm: The Rift PC game resource collection.
 
+## Ports
+- [Chasm-Reverse Panzerchasm](https://github.com/Panzerschrek/Chasm-Reverse)
+- [OpenChasm](https://github.com/alexey-lysiuk/OpenChasm)
+- [Chasm: The Rift Portable Staging](https://www.moddb.com/games/chasm-the-rift/downloads/chasm-portable-staging)
+- [Chasm: The Rift Demo](https://www.gog.com/en/game/chasmtherift_demo)
+
 ## Links
 - [Chasm: The Rift Archive](https://www.chasm3d.com/)
 - [Chasm: The Rift - FLAC OST music](https://www.chasm3d.com/files/music/flac/)
@@ -9,13 +15,7 @@ Chasm: The Rift PC game resource collection.
 - [Chasm: The Rift - Website Recreation by Effektus](http://chasm.atspace.eu/)
 - [Noesis .3O/.CAR 3D model viewer/converter](https://richwhitehouse.com/index.php?content=inc_stream.php)
 
-## Ports
-- [Chasm-Reverse Panzerchasm](https://github.com/Panzerschrek/Chasm-Reverse)
-- [OpenChasm](https://github.com/alexey-lysiuk/OpenChasm)
-- [Chasm: The Rift Portable Staging](https://www.moddb.com/games/chasm-the-rift/downloads/chasm-portable-staging)
-- [Chasm: The Rift Demo](https://www.gog.com/en/game/chasmtherift_demo)
-
-### Reverse Engineering
+## Reverse Engineering
 - [Peganza Pascal Analyzer](https://www.peganza.com/)
 - [A Deep Dive into the Turbo Pascal Compiled Code](https://github.com/daelsepara/turbo-pascal-assembly)
 - [Awesome Pascal](https://github.com/Fr0sT-Brutal/awesome-pascal)
@@ -26,9 +26,9 @@ Chasm: The Rift PC game resource collection.
 - [Hachoir is a Python library to view and edit a binary stream field by field](https://github.com/vstinner/hachoir)
 - [Kaitai Struct: declarative language to generate binary data parsers](https://github.com/kaitai-io/kaitai_struct)
 
-### Similiar Pascal Games
+## Similiar Pascal Games
 
-#### [HROT](https://en.wikipedia.org/wiki/Hrot)
+### [HROT](https://en.wikipedia.org/wiki/Hrot)
 - [HROT Demo](https://www.gog.com/en/game/hrot_demo)
 - [HROT CLI Tools](https://github.com/joshuaskelly/hrot-cli-tools)
 ```cpp
