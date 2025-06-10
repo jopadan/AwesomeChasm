@@ -34,7 +34,7 @@ struct face
         sca::u16                              sprite_off;
 };
 
-/* .CAR Chasm: The Rift Carrara 3D model file format 
+/* .CAR Chasm: The Rift Carrara 3D model file format */ 
 struct car
 {
         arr::type<sca::u16   ,  20>           animations;
