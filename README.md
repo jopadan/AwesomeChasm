@@ -63,9 +63,9 @@ struct car : car_header, c3o
 {
         size_t sounds_offset()
         {
-                size_t dst = th + 0x486Cu;
+                size_t dst                         = th + sizeof(struct car_header) + 0x4806u;
                 for(size_t i = 0; i < 20; i++) dst += animations[i];
-                for(size_t i = 0; i < 3u; i++) dst += submodels_animations[i].sum() + 04806u;
+                for(size_t i = 0; i < 3u; i++) dst += submodels_animations[i].sum() + 0x4806u;
                 return dst;
         }
 };
