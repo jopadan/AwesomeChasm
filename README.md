@@ -61,6 +61,21 @@ struct car
                 return dst;
         }
 };
+
+/* .3O Chasm: The Rift 3D model file format */
+struct c3o
+{
+        arr::type<face       , 400>                faces; // 0x0000
+        arr::type<vec::i16<3>, 256>                overt; // 0x3200
+        arr::type<vec::i16<3>, 256>                rvert;
+        arr::type<vec::i16<3>, 256>               shvert;
+        arr::type<vec::i16<2>, 256>               scvert;
+
+        sca::u16                            vertex_count; // 0x4800
+        sca::u16                              face_count; // 0x4802
+        sca::u16                                      th; // 0x4804 filesize = th * 64;
+};
+
 ```
 
 ## Music
