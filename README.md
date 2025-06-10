@@ -34,33 +34,15 @@ struct face
         sca::u16                              sprite_off;
 };
 
-/* .CAR Chasm: The Rift Carrara Caracter 3D model file format */ 
-struct car
+/* .CAR format header */ 
+struct car_header
 {
         arr::type<sca::u16   ,  20>           animations;
         arr::type<vec::u16<2>,   3> submodels_animations;
         arr::type<sca::u16   ,   6>             unknown0;
         arr::type<sca::u16   ,   3>               sounds;
         arr::type<sca::u16   ,  16>                  sfx;
-
-        arr::type<face       , 400>                faces; // 0x0066
-        arr::type<vec::i16<3>, 256>                overt; // 0x3266
-        arr::type<vec::i16<3>, 256>                rvert;
-        arr::type<vec::i16<3>, 256>               shvert;
-        arr::type<vec::i16<2>, 256>               scvert;
-
-        sca::u16                            vertex_count; // 0x4866
-        sca::u16                              face_count; // 0x4868
-        sca::u16                                      th; // 0x486A filesize = th * 64;
-
-        size_t sounds_offset()
-        {
-                size_t dst = th + 0x486Cu;
-                for(size_t i = 0; i < 20; i++) dst += animations[i];
-                for(size_t i = 0; i < 3u; i++) dst += submodels_animations[i].sum() + 04806u;
-                return dst;
-        }
-};
+}
 
 /* .3O Chasm: The Rift 3D model file format */
 struct c3o
@@ -76,6 +58,17 @@ struct c3o
         sca::u16                                      th; // 0x4804 filesize = th * 64;
 };
 
+/* .CAR Chasm: The Rift Carrara Caracter 3D model file format */ 
+struct car : car_header, c3o
+{
+        size_t sounds_offset()
+        {
+                size_t dst = th + 0x486Cu;
+                for(size_t i = 0; i < 20; i++) dst += animations[i];
+                for(size_t i = 0; i < 3u; i++) dst += submodels_animations[i].sum() + 04806u;
+                return dst;
+        }
+};
 ```
 
 ## Music
