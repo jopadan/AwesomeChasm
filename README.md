@@ -20,6 +20,7 @@ Chasm: The Rift PC game resource collection.
 - [c3d](https://github.com/pyushkevich/c3d)
 - [daz3d](https://github.com/daz3d/)
 - [Carrara](https://www.daz3d.com/carrara-8-5-pro)
+- [mm3d](https://github.com/clover-moe/mm3d)
 
 ```cpp
 /* QUAD/TRIANGLE polygon face */
