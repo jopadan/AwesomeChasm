@@ -11,6 +11,7 @@ Chasm: The Rift PC game resource collection.
 - [OpenChasm](https://github.com/alexey-lysiuk/OpenChasm)
 - [Chasm: The Rift Portable Staging](https://www.moddb.com/games/chasm-the-rift/downloads/chasm-portable-staging)
 - [Chasm: The Rift Demo](https://www.gog.com/en/game/chasmtherift_demo)
+- [Zrift Chasm in Doom - Legacy Edition](https://www.moddb.com/mods/zrift-chasm-in-doom-legacy-edition/downloads/zrift-chasm-in-doom-legacy-edition-v11)
 
 ## Models
 - [Chasm: The Rift - 3OVIEW.EXE DOS model viewer](https://www.chasm3d.com/files/dump/CDEMOf.zip)
