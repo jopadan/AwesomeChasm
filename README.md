@@ -44,7 +44,7 @@ struct car_header
         arr::type<sca::u16   ,   6>             unknown0;
         arr::type<sca::u16   ,   3>               sounds;
         arr::type<sca::u16   ,  16>                  sfx;
-}
+};
 
 /* .3O Chasm: The Rift 3D model file format */
 struct c3o
