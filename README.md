@@ -42,8 +42,9 @@ struct car_header
         arr::type<sca::u16   ,  20>           animations;
         arr::type<vec::u16<2>,   3> submodels_animations;
         arr::type<sca::u16   ,   6>             unknown0;
-        arr::type<sca::u16   ,   3>               sounds;
-        arr::type<sca::u16   ,  16>                  sfx;
+        arr::type<sca::u16   ,   3>                 gsnd;
+        arr::type<sca::u16   ,   8>              sfx_len;
+        arr::type<sca::u16   ,   8>              sfx_vol;
 };
 
 /* .3O Chasm: The Rift 3D model file format */
@@ -57,7 +58,7 @@ struct c3o
 
         sca::u16                            vertex_count; // 0x4800
         sca::u16                              face_count; // 0x4802
-        sca::u16                                      th; // 0x4804 filesize = th * 64;
+        sca::u16                                      th; // 0x4804
 };
 
 /* .CAR Chasm: The Rift Carrara Caracter 3D model file format */ 
@@ -65,9 +66,13 @@ struct car : car_header, c3o
 {
         size_t sounds_offset()
         {
-                size_t dst                         = th + sizeof(struct car_header) + 0x4806u;
+                size_t dst = th + sizeof(struct car_header) + 0x4806u;
                 for(size_t i = 0; i < 20; i++) dst += animations[i];
-                for(size_t i = 0; i < 3u; i++) dst += submodels_animations[i].sum() + 0x4806u;
+                for(size_t i = 0; i < 3u; i++)
+                {
+                        const size_t sum = submodels_animations[i].sum();
+                        dst += sum == 0 ? 0 : sum + 0x4806u;
+                }
                 return dst;
         }
 };
