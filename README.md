@@ -39,8 +39,8 @@ struct face
 /* .CAR format header */ 
 struct car_header
 {
-        arr::type<sca::u16   ,  20>           animations;
-        arr::type<vec::u16<2>,   3> submodels_animations;
+        arr::type<sca::u16   ,  20>                anims;
+        arr::type<vec::u16<2>,   3>            sub_anims;
         arr::type<sca::u16   ,   6>             unknown0;
         arr::type<sca::u16   ,   3>                 gsnd;
         arr::type<sca::u16   ,   8>              sfx_len;
@@ -67,10 +67,10 @@ struct car : car_header, c3o
         size_t sounds_offset()
         {
                 size_t dst = th + sizeof(struct car_header) + 0x4806u;
-                for(size_t i = 0; i < 20; i++) dst += animations[i];
+                for(size_t i = 0; i < 20; i++) dst += anims[i];
                 for(size_t i = 0; i < 3u; i++)
                 {
-                        const size_t sum = submodels_animations[i].sum();
+                        const size_t sum = sub_anims[i].sum();
                         dst += sum == 0 ? 0 : sum + 0x4806u;
                 }
                 return dst;
