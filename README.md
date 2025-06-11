@@ -42,6 +42,8 @@ struct car_header
         arr::type<sca::u16   ,  20>                anims;
         arr::type<vec::u16<2>,   3>            sub_anims;
         arr::type<sca::u16   ,   6>             unknown0;
+
+        /* SepPartInfo[monster_index + i].FallSound gsnd id defaults to 73 for gibs */
         arr::type<sca::u16   ,   3>                 gsnd;
         arr::type<sca::u16   ,   8>              sfx_len;
         arr::type<sca::u16   ,   8>              sfx_vol;
@@ -74,6 +76,16 @@ struct car : car_header, c3o
                         dst += sum == 0 ? 0 : sum + 0x4806u;
                 }
                 return dst;
+        }
+        bool set_sound(const size_t monster_number)
+        {
+            const size_t monster_index = monster_number - 100;
+            if(monster_index >= 23)
+                return false;
+
+            for (size_t i = 0; i < gsnd.size(); ++i)
+                SepPartInfo[monster_index + i].FallSound = gsnd[i];
+            return true;
         }
 };
 ```
