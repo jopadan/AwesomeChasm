@@ -78,6 +78,13 @@ struct car : car_header, c3o
                 }
                 return dst;
         }
+        bool verify_length(size_t len)
+        {
+            size_t acc = sounds_offset();
+            for(size_t i = 0; i < sfx_len.size(); i++)
+                acc += sfx_len[i];
+            return acc == len;
+        }
         bool set_sound(const size_t monster_number)
         {
             const size_t monster_index = monster_number - 100;
