@@ -13,8 +13,11 @@ Chasm: The Rift PC game resource collection.
 - [Chasm: The Rift Demo](https://www.gog.com/en/game/chasmtherift_demo)
 - [Zrift Chasm in Doom - Legacy Edition](https://www.moddb.com/mods/zrift-chasm-in-doom-legacy-edition/downloads/zrift-chasm-in-doom-legacy-edition-v11)
 
-## Models
+## Modding
+- [Chasm: The Rift Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=3128742113)
 - [Chasm Modding Toolkit Package](https://www.moddb.com/games/chasm-the-rift/downloads/chasm-modding-toolkit-package)
+
+## Models
 - [Chasm: The Rift - 3OVIEW.EXE DOS model viewer](https://www.chasm3d.com/files/dump/CDEMOf.zip)
 - [Noesis .3O/.CAR 3D model viewer/converter](https://richwhitehouse.com/index.php?content=inc_stream.php)
 - [noesis_py still misses .3O/.CAR support](https://github.com/atrzaska/noesis_py)
