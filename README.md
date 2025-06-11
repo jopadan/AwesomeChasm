@@ -78,7 +78,7 @@ struct car : car_header, c3o
                 }
                 return dst;
         }
-        bool verify_length(size_t len)
+        bool verify_length(const size_t len)
         {
             size_t acc = sounds_offset();
             for(size_t i = 0; i < sfx_len.size(); i++)
