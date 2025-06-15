@@ -19,12 +19,12 @@ Chasm: The Rift PC game resource collection.
 
 ## Models
 - [Chasm: The Rift - 3OVIEW.EXE DOS model viewer](https://www.chasm3d.com/files/dump/CDEMOf.zip)
+- [Autodesk Animator](https://github.com/AnimatorPro)
 - [Noesis .3O/.CAR 3D model viewer/converter](https://richwhitehouse.com/index.php?content=inc_stream.php)
 - [noesis_py still misses .3O/.CAR support](https://github.com/atrzaska/noesis_py)
 - [P3DO Explorer/Organizer](www.senosoft.com/softp3doDownload.php)
 - [c3d](https://github.com/pyushkevich/c3d)
 - [daz3d](https://github.com/daz3d/)
-- [Carrara](https://www.daz3d.com/carrara-8-5-pro)
 - [mm3d](https://github.com/clover-moe/mm3d)
 
 ```cpp
