@@ -14,8 +14,11 @@ Chasm: The Rift PC game resource collection.
 - [Zrift Chasm in Doom - Legacy Edition](https://www.moddb.com/mods/zrift-chasm-in-doom-legacy-edition/downloads/zrift-chasm-in-doom-legacy-edition-v11)
 
 ## Modding
+- [moddb](https://www.moddb.com/games/chasm-the-rift)
+- [The Shadow Zone](https://discord.com/channels/768103789411434586/1374778669612007527)
+  - [Chasm Modding Toolkit Package](https://discord.com/channels/768103789411434586/1374842906002718803)
+  - [OpenSesame](https://discord.com/channels/768103789411434586/1374929171263918080)
 - [Chasm: The Rift Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=3128742113)
-- [Chasm Modding Toolkit Package](https://www.moddb.com/games/chasm-the-rift/downloads/chasm-modding-toolkit-package)
 
 ## Models
 - [Chasm: The Rift - 3OVIEW.EXE DOS model viewer](https://www.chasm3d.com/files/dump/CDEMOf.zip)
