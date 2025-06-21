@@ -1,11 +1,6 @@
 # AwesomeChasm
 Chasm: The Rift PC game resource collection.
 
-## Links
-- [Chasm: The Rift Archive](https://www.chasm3d.com/)
-- [Chasm: The Rift Modding Wiki](https://moddingwiki.shikadi.net/wiki/Chasm:_The_Rift)
-- [Chasm: The Rift - Website Recreation by Effektus](http://chasm.atspace.eu/)
-
 ## Ports
 - [Chasm-Reverse Panzerchasm](https://github.com/Panzerschrek/Chasm-Reverse)
 - [OpenChasm](https://github.com/alexey-lysiuk/OpenChasm)
@@ -14,21 +9,16 @@ Chasm: The Rift PC game resource collection.
 - [Zrift Chasm in Doom - Legacy Edition](https://www.moddb.com/mods/zrift-chasm-in-doom-legacy-edition/downloads/zrift-chasm-in-doom-legacy-edition-v11)
 
 ## Modding
-- [moddb](https://www.moddb.com/games/chasm-the-rift)
+- [Chasm: The Rift Archive](https://www.chasm3d.com/)
+- [Shikadi Modding Wiki](https://moddingwiki.shikadi.net/wiki/Chasm:_The_Rift)
 - [The Shadow Zone](https://discord.com/channels/768103789411434586/1374778669612007527)
   - [Chasm Modding Toolkit Package](https://discord.com/channels/768103789411434586/1374842906002718803)
   - [OpenSesame](https://discord.com/channels/768103789411434586/1374929171263918080)
+- [moddb](https://www.moddb.com/games/chasm-the-rift)
 - [Chasm: The Rift Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=3128742113)
-
-## Models
 - [Chasm: The Rift - 3OVIEW.EXE DOS model viewer](https://www.chasm3d.com/files/dump/CDEMOf.zip)
 - [Autodesk Animator](https://github.com/AnimatorPro)
 - [Noesis .3O/.CAR 3D model viewer/converter](https://richwhitehouse.com/index.php?content=inc_stream.php)
-- [noesis_py still misses .3O/.CAR support](https://github.com/atrzaska/noesis_py)
-- [P3DO Explorer/Organizer](www.senosoft.com/softp3doDownload.php)
-- [c3d](https://github.com/pyushkevich/c3d)
-- [daz3d](https://github.com/daz3d/)
-- [mm3d](https://github.com/clover-moe/mm3d)
 
 ```cpp
 /* QUAD/TRIANGLE polygon face */
@@ -106,6 +96,9 @@ struct car : car_header, c3o
 
 ## Music
 - [Chasm: The Rift - FLAC OST music](https://www.chasm3d.com/files/music/flac/)
+
+## Links
+- [Chasm: The Rift - Website Recreation by Effektus](http://chasm.atspace.eu/)
 
 ## Reverse Engineering
 - [Peganza Pascal Analyzer](https://www.peganza.com/)
