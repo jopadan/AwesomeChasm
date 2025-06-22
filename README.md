@@ -44,8 +44,8 @@ struct CARHeader
         arr::type<sca::u16   ,   3>                   id; /* FallSound id */
     } gsnd;
     struct SFX {
-        arr::type<sca::u16   ,   8>                  len;
-        arr::type<sca::u16   ,   8>                  vol;
+        vec::u16<                8>                  len;
+        vec::u16<                8>                  vol;
     } sfx;
 };
 
