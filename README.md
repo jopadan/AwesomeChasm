@@ -34,7 +34,7 @@ struct face
 };
 
 /* .CAR Chasm: The Rift Caracter 3D model file format header */ 
-struct car_header
+struct CARHeader
 {
     struct AniMap {
         arr::type<sca::u16   ,  20>                model;
@@ -64,7 +64,7 @@ struct c3o
 };
 
 /* .CAR Chasm: The Rift Caracter 3D model file format */ 
-struct car : car_header, c3o
+struct car : CARHeader, c3o
 {
         size_t sounds_offset()
         {
