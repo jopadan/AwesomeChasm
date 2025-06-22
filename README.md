@@ -37,8 +37,8 @@ struct face
 struct CARHeader
 {
     struct AniMap {
-        arr::type<sca::u16   ,  20>                model;
-        arr::type<vec::u16<2>,   6>            sub_model;
+        arr::type<sca::u16   ,  20>                model; /* anim data sizes */
+        arr::type<vec::u16<2>,   6>            sub_model; /* sub model anim data sizes */
     } anims;
     struct GSND {
         arr::type<sca::u16   ,   3>                   id; /* FallSound id */
