@@ -36,14 +36,17 @@ struct face
 /* .CAR format header */ 
 struct car_header
 {
-        arr::type<sca::u16   ,  20>                anims;
-        arr::type<vec::u16<2>,   3>            sub_anims;
-        arr::type<sca::u16   ,   6>             unknown0;
-
-        /* SepPartInfo[monster_index + i].FallSound gsnd id defaults to 73 for gibs */
-        arr::type<sca::u16   ,   3>                 gsnd;
-        arr::type<sca::u16   ,   8>              sfx_len;
-        arr::type<sca::u16   ,   8>              sfx_vol;
+    struct AniMap {
+        arr::type<sca::u16   ,  20>                model;
+        arr::type<vec::u16<2>,   6>            sub_model;
+    } anims;
+    struct GSND {
+        arr::type<sca::u16   ,   3>                   id; /* FallSound id */
+    } gsnd;
+    struct SFX {
+        arr::type<sca::u16   ,   8>                  len;
+        arr::type<sca::u16   ,   8>                  vol;
+    } sfx;
 };
 
 /* .3O Chasm: The Rift 3D model file format */
