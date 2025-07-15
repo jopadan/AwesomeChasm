@@ -146,7 +146,7 @@ enum format csm_model_format(uint8_t* buf, size_t len)
 
         if(buf != NULL && len > 0)
         {
-                if(hdr_len  + c3o->th * tw == len)
+                if(hdr_len + c3o->th * tw == len)
                         return CHASM_FORMAT_3O;
 
                 hdr_len += car_len;
