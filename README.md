@@ -21,80 +21,144 @@ Chasm: The Rift PC game resource collection.
 - [Noesis .3O/.CAR 3D model viewer/converter](https://richwhitehouse.com/index.php?content=inc_stream.php)
 
 ```cpp
-/* QUAD/TRIANGLE polygon face */
-struct face
+#ifdef __cpluplus__
+extern "C" {
+#include <cstdint>
+#include <cstddef>
+#include <cstdlib>
+#include <cstdio>
+#else
+#include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
+#endif
+#include <sys/stat.h>
+
+typedef uint32_t u32;
+typedef  int32_t i32;
+typedef uint16_t u16;
+typedef  int16_t i16;
+typedef uint8_t   u8;
+typedef uint8_t   i8;
+typedef float    f32;
+
+#pragma pack(push,1)
+typedef struct {
+    uint16_t vi[4];
+    uint16_t uv[4][2];
+    uint16_t next;
+    uint16_t distant;
+    uint8_t  group;
+    uint8_t  flags;
+    uint16_t uv_off;
+} face;
+
+typedef struct {
+union
 {
-        vec::u16 <               4>              indices;
-        arr::type<vec::u16<2>,   4>                   uv;
-        sca::i16                                    next;
-        sca::i16                                 distant;
-        sca::u8                                      num;
-        sca::u8                                    flags;
-        sca::u16                              sprite_off;
+    struct { i16 x,y,z; };
+    i16 xyz[3];
+};
+} i16x3;
+
+typedef struct {
+union
+{
+        struct { i16 x,y; };
+        i16 xy[2];
+};
+} i16x2;
+
+typedef struct {
+        struct animap {
+                u16 model[20];
+                u16 sub_model[6][2];
+        } anims;
+        struct gsnd {
+                u16 id[3];
+        } gsnd;
+        struct sfx {
+                u16 len[8];
+                u16 vol[8];
+        } sfx;
+        face   faces[400];
+        i16x3  overt[256];
+        i16x3  rvert[256];
+        i16x3 shvert[256];
+        i16x2 scvert[256];
+        u16        vcount;
+        u16        fcount;
+        u16            th;
+} car_header;
+
+typedef struct
+{
+        face   faces[400];
+        i16x3  overt[256];
+        i16x3  rvert[256];
+        i16x3 shvert[256];
+        i16x2 scvert[256];
+        u16        vcount;
+        u16        fcount;
+        u16            th;
+} c3o_header;
+
+enum format
+{
+        CHASM_FORMAT_NONE = 0 << 0,
+        CHASM_FORMAT_3O   = 1 << 0,
+        CHASM_FORMAT_CAR  = CHASM_FORMAT_3O + 1 << 1,
 };
 
-/* .CAR Chasm: The Rift Caracter 3D model file format header */ 
-struct CARHeader
+/* .car Chasm: The Rift 3D model file format frame count */ 
+size_t csm_model_car_frame_count(car_header* hdr)
 {
-    struct AniMap {
-        arr::type<sca::u16   ,  20>                model; /* anim data sizes */
-        arr::type<vec::u16<2>,   6>            sub_model; /* sub model anim data sizes */
-    } anims;
-    struct GSND {
-        arr::type<sca::u16   ,   3>                   id; /* FallSound id */
-    } gsnd;
-    struct SFX {
-        vec::u16<                8>                  len;
-        vec::u16<                8>                  vol;
-    } sfx;
-};
-
-/* .3O Chasm: The Rift 3D model file format */
-struct c3o
-{
-        arr::type<face       , 400>                faces; // 0x0000
-        arr::type<vec::i16<3>, 256>                overt; // 0x3200
-        arr::type<vec::i16<3>, 256>                rvert;
-        arr::type<vec::i16<3>, 256>               shvert;
-        arr::type<vec::i16<2>, 256>               scvert;
-
-        sca::u16                            vertex_count; // 0x4800
-        sca::u16                              face_count; // 0x4802
-        sca::u16                                      th; // 0x4804
-};
-
-/* .CAR Chasm: The Rift Caracter 3D model file format */ 
-struct car : CARHeader, c3o
-{
-        size_t sounds_offset()
+        size_t dst = 0;
+        for(size_t i = 0; i < 20; i++)
+                dst += hdr->anims.model[i];
+        for(size_t i = 0; i < 6; i++)
         {
-                size_t dst = th + sizeof(struct car_header) + 0x4806u;
-                for(size_t i = 0; i < 20; i++) dst += anims[i];
-                for(size_t i = 0; i < 3u; i++)
-                {
-                        const size_t sum = sub_anims[i].sum();
-                        dst += sum == 0 ? 0 : sum + 0x4806u;
-                }
-                return dst;
+                const size_t sum = hdr->anims.sub_model[i][0] + hdr->anims.sub_model[i][1];
+                dst += sum == 0 ? 0 : sum + sizeof(c3o_header);
         }
-        bool verify_length(const size_t len)
-        {
-            size_t acc = sounds_offset();
-            for(size_t i = 0; i < sfx_len.size(); i++)
-                acc += sfx_len[i];
-            return acc == len;
-        }
-        bool set_sound(const size_t monster_number)
-        {
-            const size_t monster_index = monster_number - 100;
-            if(monster_index >= 23)
-                return false;
+        return dst;
+}
 
-            for (size_t i = 0; i < gsnd.size(); ++i)
-                SepPartInfo[monster_index + i].FallSound = gsnd[i];
-            return true;
+/* .car Chasm: The Rift 3D model file format frame sfx length */ 
+size_t csm_model_car_sfx_len(car_header* hdr)
+{
+        size_t dst = 0;
+        for(size_t i = 0; i < 8; i++)
+                dst += hdr->sfx.len[i];
+        return dst;
+}
+
+/* .3o/.car Chasm: The Rift 3D model file format identifaction */
+enum format csm_model_format(uint8_t* buf, size_t len)
+{
+        size_t       hdr_len = sizeof(c3o_header);
+        const size_t car_len = sizeof(car_header) - hdr_len;
+        size_t            tw = 64;
+        c3o_header*      c3o = (c3o_header*)buf;
+        car_header*      car = (car_header*)buf;
+
+        if(buf != NULL && len > 0)
+        {
+                if(hdr_len  + c3o->th * tw == len)
+                        return CHASM_FORMAT_3O;
+
+                hdr_len += car_len;
+                tw       = csm_model_car_frame_count(car) + csm_model_car_sfx_len(car);
+
+                if(hdr_len + car->th + tw == len)
+                        return CHASM_FORMAT_CAR;
         }
+        return CHASM_FORMAT_NONE;
+}
+#ifdef __cplusplus
 };
+#endif
 ```
 
 ## Music
