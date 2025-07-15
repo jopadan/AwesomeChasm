@@ -136,7 +136,7 @@ size_t csm_model_car_sfx_len(car_header* hdr)
 }
 
 /* .3o/.car Chasm: The Rift 3D model file format identifaction */
-enum format csm_model_format(uint8_t* buf, size_t len)
+enum format csm_model_format(u8* buf, size_t len)
 {
         size_t       hdr_len = sizeof(c3o_header);
         const size_t car_len = sizeof(car_header) - hdr_len;
