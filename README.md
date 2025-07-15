@@ -103,6 +103,7 @@ typedef struct
         u16        fcount;
         u16            th;
 } c3o_header;
+#pragma pack(pop,1)
 
 enum format
 {
