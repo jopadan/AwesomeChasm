@@ -158,7 +158,7 @@ enum format csm_model_format(uint8_t* buf, size_t len)
         return CHASM_FORMAT_NONE;
 }
 #ifdef __cplusplus
-};
+}
 #endif
 ```
 
