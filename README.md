@@ -21,7 +21,7 @@ Chasm: The Rift PC game resource collection.
 - [Noesis .3O/.CAR 3D model viewer/converter](https://richwhitehouse.com/index.php?content=inc_stream.php)
 
 ```cpp
-#ifdef __cpluplus
+#ifdef __cplusplus
 extern "C" {
 #include <cstdint>
 #include <cstddef>
