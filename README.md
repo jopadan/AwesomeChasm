@@ -150,7 +150,8 @@ enum format csm_model_format(u8* buf, size_t len)
                         return CHASM_FORMAT_3O;
 
                 hdr_len += car_len;
-                tw       = csm_model_car_frame_count(car) + csm_model_car_sfx_len(car);
+                tw       = csm_model_car_frame_count(car);
+                tw      += csm_model_car_sfx_len(car);
 
                 if(hdr_len + car->th + tw == len)
                         return CHASM_FORMAT_CAR;
