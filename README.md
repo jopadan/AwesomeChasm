@@ -1,21 +1,24 @@
 # AwesomeChasm
 Chasm: The Rift PC game resource collection.
 
+## Official Releases
+- [Chasm: The Rift](https://www.mobygames.com/game/2691/chasm-the-rift/)
+
 ## Ports
 - [Chasm-Reverse Panzerchasm](https://github.com/Panzerschrek/Chasm-Reverse)
 - [OpenChasm](https://github.com/alexey-lysiuk/OpenChasm)
 - [Chasm: The Rift Portable Staging](https://www.moddb.com/games/chasm-the-rift/downloads/chasm-portable-staging)
-- [Chasm: The Rift Demo](https://www.gog.com/en/game/chasmtherift_demo)
 - [Zrift Chasm in Doom - Legacy Edition](https://www.moddb.com/mods/zrift-chasm-in-doom-legacy-edition/downloads/zrift-chasm-in-doom-legacy-edition-v11)
 
 ## Formats
 - [glcar3o](https://github.com/jopadan/glcar3o/wiki)
 - [Shikadi Modding Wiki](https://moddingwiki.shikadi.net/wiki/Chasm:_The_Rift)
+- [The Shadow Zone](https://discord.com/channels/768103789411434586/1374778669612007527)
+  - [Chasm Modding Toolkit Package](https://discord.com/channels/768103789411434586/1374842906002718803)
 
 ## Modding
 - [Chasm: The Rift Archive](https://www.chasm3d.com/)
 - [The Shadow Zone](https://discord.com/channels/768103789411434586/1374778669612007527)
-  - [Chasm Modding Toolkit Package](https://discord.com/channels/768103789411434586/1374842906002718803)
   - [OpenSesame](https://discord.com/channels/768103789411434586/1374929171263918080)
 - [moddb](https://www.moddb.com/games/chasm-the-rift)
 - [Chasm: The Rift Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=3128742113)
