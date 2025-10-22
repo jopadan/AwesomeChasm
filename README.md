@@ -18,6 +18,7 @@ Chasm: The Rift PC game resource collection.
 
 ## Modding
 - [Chasm: The Rift Archive](https://www.chasm3d.com/)
+- [The Shadow Zone Invite](discord.gg/f85Cz4FaXP)
 - [The Shadow Zone](https://discord.com/channels/768103789411434586/1374778669612007527)
   - [OpenSesame](https://discord.com/channels/768103789411434586/1374929171263918080)
 - [moddb](https://www.moddb.com/games/chasm-the-rift)
